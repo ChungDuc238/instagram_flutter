@@ -22,21 +22,21 @@ class _UserInfoWidgetState extends State<UserInfoWidget> {
     }
     return Row(
       children: [
-        // Column(
-        //   children: [
-        //     CustomAvatarCircle(imagePath: imagePath, size: size),
-        //     Text('name'),
-        //   ],
-        // ),
         Column(
           children: [
-            Text('${user.followers}'),
+            CustomAvatarCircle(imagePath: '${user.photoUrl}', size: 24),
+            Text(user.displayName ?? 'Người dùng'),
+          ],
+        ),
+        Column(
+          children: [
+            Text('${user.followers?.length ?? 0}'),
             const Text('Người theo dõi'),
           ],
         ),
         Column(
           children: [
-            Text('${user.following}'),
+            Text('${user.following?.length ?? 0}'),
             const Text('Đang theo dõi'),
           ],
         ),

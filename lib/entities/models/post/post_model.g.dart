@@ -12,7 +12,7 @@ _$_PostModel _$$_PostModelFromJson(Map<String, dynamic> json) => _$_PostModel(
       date: DateTime.parse(json['date'] as String),
       like: json['like'] as List<dynamic>,
       caption: json['caption'] as String?,
-      userName: json['userName'] as String?,
+      userName: json['userName'] as String? ?? 'user_name',
       urlPhoto: json['urlPhoto'] as String?,
       profileImage: json['profileImage'] as String?,
     );

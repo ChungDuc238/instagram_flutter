@@ -4,6 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import '../screens/add_post/presentations/page/add_post_page.dart';
 import '../screens/auth/presentations/page/login/login_page.dart';
 import '../screens/auth/presentations/page/sign_up/sign_up_page.dart';
+import '../screens/comment/presentations/page/comment_page.dart';
 import '../screens/home/presentations/page/home_page.dart';
 import '../screens/user_profile/presentations/page/user_profile_page.dart';
 

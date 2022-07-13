@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../commons/common.dart';
-import '../../../../../commons/components/custom_bottom_nav.dart';
 import '../bloc/home_bloc.dart';
 import 'header_home_widget.dart';
 import 'post_view_widget.dart';
@@ -16,6 +15,7 @@ class HomeWidget extends StatefulWidget {
 class _HomeWidgetState extends State<HomeWidget> {
   @override
   void initState() {
+    context.read<HomeBloc>().add(const HomeEventLoadData());
     super.initState();
   }
 
@@ -25,21 +25,16 @@ class _HomeWidgetState extends State<HomeWidget> {
       builder: (context, state) {
         return Scaffold(
           body: SafeArea(
-            child: Column(
-              children: const [HeaderHomeWidget(), PostViewWidget()],
+            child: SingleChildScrollView(
+              child: Column(
+                children: const [HeaderHomeWidget(), PostViewWidget()],
+              ),
             ),
           ),
           bottomNavigationBar: const CustomBottomNavWidget(),
         );
       },
-      listener: (context, state) {
-        if (state is HomeStateSuccess) {
-          print(true);
-        }
-        if (state is HomeStateInitial) {
-          print(false);
-        }
-      },
+      listener: (context, state) {},
     );
   }
 }

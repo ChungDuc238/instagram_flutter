@@ -16,7 +16,7 @@ class PostNewFeedUseCase {
     String caption,
   ) async {
     final urlImage = await UploadFileUseCase().upload(file);
-    final CollectionReference collectionRef = _firestore.collection('post');
+    final CollectionReference collectionRef = _firestore.collection('posts');
     try {
       final post = PostModel(
         uid: FirebaseAuth.instance.currentUser!.uid,

@@ -18,33 +18,33 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$UserEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() Initial,
+    required TResult Function() initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? Initial,
+    TResult Function()? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? Initial,
+    TResult Function()? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(UserInitialEvent value) Initial,
+    required TResult Function(UserInitialEvent value) initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UserInitialEvent value)? Initial,
+    TResult Function(UserInitialEvent value)? initial,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(UserInitialEvent value)? Initial,
+    TResult Function(UserInitialEvent value)? initial,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -91,7 +91,7 @@ class _$UserInitialEvent implements UserInitialEvent {
 
   @override
   String toString() {
-    return 'UserEvent.Initial()';
+    return 'UserEvent.initial()';
   }
 
   @override
@@ -106,27 +106,27 @@ class _$UserInitialEvent implements UserInitialEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function() Initial,
+    required TResult Function() initial,
   }) {
-    return Initial();
+    return initial();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? Initial,
+    TResult Function()? initial,
   }) {
-    return Initial?.call();
+    return initial?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? Initial,
+    TResult Function()? initial,
     required TResult orElse(),
   }) {
-    if (Initial != null) {
-      return Initial();
+    if (initial != null) {
+      return initial();
     }
     return orElse();
   }
@@ -134,27 +134,27 @@ class _$UserInitialEvent implements UserInitialEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(UserInitialEvent value) Initial,
+    required TResult Function(UserInitialEvent value) initial,
   }) {
-    return Initial(this);
+    return initial(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(UserInitialEvent value)? Initial,
+    TResult Function(UserInitialEvent value)? initial,
   }) {
-    return Initial?.call(this);
+    return initial?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(UserInitialEvent value)? Initial,
+    TResult Function(UserInitialEvent value)? initial,
     required TResult orElse(),
   }) {
-    if (Initial != null) {
-      return Initial(this);
+    if (initial != null) {
+      return initial(this);
     }
     return orElse();
   }

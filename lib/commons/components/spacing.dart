@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const kDefaultPadding = 30.0;
+const kDefaultPadding = 16.0;
 //Spacing Widget (Vertical)
 SizedBox yHeight05 = const SizedBox(
   height: 5,

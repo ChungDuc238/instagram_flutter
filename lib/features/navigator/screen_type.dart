@@ -7,6 +7,7 @@ class ScreenType with _$ScreenType {
   const factory ScreenType.addPost() = ScreenTypeAddPost;
   const factory ScreenType.userProfile() = ScreenTypeUserProfile;
   const factory ScreenType.signUp() = ScreenTypeSignUp;
+  const factory ScreenType.comment(String postId) = ScreenTypeComment;
 }
 
 class ScreentTypeHelper {
@@ -17,16 +18,20 @@ class ScreentTypeHelper {
       addPost: AddPostPage.new,
       userProfile: UserProfilePage.new,
       signUp: SignUpPage.new,
+      comment: (postId) => CommentPage(
+        postId: postId,
+      ),
     );
   }
 
   static String name(ScreenType screen) {
     return screen.when(
       login: () => 'Login',
-      home:() => 'Home',
-      addPost:() => 'AddPost',
-      userProfile:() => 'UserProfile',
-      signUp:() => 'SignUp',
+      home: () => 'Home',
+      addPost: () => 'AddPost',
+      userProfile: () => 'UserProfile',
+      signUp: () => 'SignUp',
+      comment: (postId) => 'Comment',
     );
   }
 }

@@ -1,11 +1,12 @@
 import 'package:dartz/dartz.dart';
 import '../../../../../core/core.dart';
-import '../../domains/entities/model/topic_model.dart';
+import '../../../../../entities/models/post/post_model.dart';
+import '../../../../../services/remote/firebase/firestore/usecase/get_list_posts_use_case.dart';
 import '../../domains/repositories/home_repository.dart';
 
 class HomeRepositoryIplm implements IHomeRepository {
   @override
-  Future<Either<ServerException, List<Topic>>> getTopic() {
-    throw UnimplementedError();
+  Future<Either<ServerException, Stream<List<PostModel>>>> getListPost() {
+    return GetListPostsUseCase().getListPosts();
   }
 }

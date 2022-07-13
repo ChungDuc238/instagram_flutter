@@ -54,7 +54,6 @@ class _HeaderAddPostWidgetState extends State<HeaderAddPostWidget> {
                   context
                       .read<AddPostBloc>()
                       .add(AddPostNewFeedEvent(file, caption));
-                  print(caption);
                 },
                 child: const Icon(Icons.check),
               ),

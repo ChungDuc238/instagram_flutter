@@ -2,14 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../../../../../commons/common.dart';
 import '../../../../../../../commons/components/custom_button.dart';
-import '../../../../../../../commons/components/custom_text_field.dart';
 import '../../../../../../../core/constans/images.dart';
 import '../../bloc/auth_bloc.dart';
 
 class SignUpFormInputWidget extends StatefulWidget {
-  
   const SignUpFormInputWidget({
-    
     super.key,
   });
 

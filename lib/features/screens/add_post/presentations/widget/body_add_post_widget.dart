@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 
 import '../../../../../commons/common.dart';
-import '../../../../../commons/components/custom_text_field.dart';
 import '../bloc/add_post_bloc.dart';
 
 class BodyAddPostWidget extends StatefulWidget {
@@ -45,7 +44,6 @@ class _BodyAddPostWidgetState extends State<BodyAddPostWidget> {
                   .add(AddPostInsertEvent(captionController.text));
             },
           ),
-          
         ],
       ),
     );

@@ -1,7 +1,8 @@
 import 'package:dartz/dartz.dart';
 import '../../../../../core/core.dart';
-import '../entities/entities.dart';
+import '../../../../../entities/models/post/post_model.dart';
+
 
 abstract class IHomeRepository {
-  Future<Either<ServerException, List<Topic>>> getTopic();
+  Future<Either<ServerException, Stream<List<PostModel>>>> getListPost();
 }

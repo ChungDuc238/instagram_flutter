@@ -190,7 +190,7 @@ class _$_PostModel implements _PostModel {
       required this.date,
       required final List<dynamic> like,
       this.caption,
-      this.userName,
+      this.userName = 'user_name',
       this.urlPhoto,
       this.profileImage})
       : _like = like;
@@ -214,6 +214,7 @@ class _$_PostModel implements _PostModel {
   @override
   final String? caption;
   @override
+  @JsonKey()
   final String? userName;
   @override
   final String? urlPhoto;

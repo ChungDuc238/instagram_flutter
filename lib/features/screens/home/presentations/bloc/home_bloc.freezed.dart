@@ -20,18 +20,21 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
+    required TResult Function(String postId) moveToCommentScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -39,18 +42,22 @@ mixin _$HomeEvent {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeEventLoadData value) loadData,
     required TResult Function(HomeEventMoveToAddPost value) moveToAddPost,
+    required TResult Function(HomeEventMoveToCommentScreen value)
+        moveToCommentScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(HomeEventLoadData value)? loadData,
     TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeEventLoadData value)? loadData,
     TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -114,6 +121,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
+    required TResult Function(String postId) moveToCommentScreen,
   }) {
     return loadData();
   }
@@ -123,6 +131,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
   }) {
     return loadData?.call();
   }
@@ -132,6 +141,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (loadData != null) {
@@ -145,6 +155,8 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeEventLoadData value) loadData,
     required TResult Function(HomeEventMoveToAddPost value) moveToAddPost,
+    required TResult Function(HomeEventMoveToCommentScreen value)
+        moveToCommentScreen,
   }) {
     return loadData(this);
   }
@@ -154,6 +166,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(HomeEventLoadData value)? loadData,
     TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
   }) {
     return loadData?.call(this);
   }
@@ -163,6 +176,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeEventLoadData value)? loadData,
     TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (loadData != null) {
@@ -220,6 +234,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
+    required TResult Function(String postId) moveToCommentScreen,
   }) {
     return moveToAddPost();
   }
@@ -229,6 +244,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
   }) {
     return moveToAddPost?.call();
   }
@@ -238,6 +254,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (moveToAddPost != null) {
@@ -251,6 +268,8 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult map<TResult extends Object?>({
     required TResult Function(HomeEventLoadData value) loadData,
     required TResult Function(HomeEventMoveToAddPost value) moveToAddPost,
+    required TResult Function(HomeEventMoveToCommentScreen value)
+        moveToCommentScreen,
   }) {
     return moveToAddPost(this);
   }
@@ -260,6 +279,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(HomeEventLoadData value)? loadData,
     TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
   }) {
     return moveToAddPost?.call(this);
   }
@@ -269,6 +289,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeEventLoadData value)? loadData,
     TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (moveToAddPost != null) {
@@ -283,41 +304,193 @@ abstract class HomeEventMoveToAddPost implements HomeEvent {
 }
 
 /// @nodoc
+abstract class _$$HomeEventMoveToCommentScreenCopyWith<$Res> {
+  factory _$$HomeEventMoveToCommentScreenCopyWith(
+          _$HomeEventMoveToCommentScreen value,
+          $Res Function(_$HomeEventMoveToCommentScreen) then) =
+      __$$HomeEventMoveToCommentScreenCopyWithImpl<$Res>;
+  $Res call({String postId});
+}
+
+/// @nodoc
+class __$$HomeEventMoveToCommentScreenCopyWithImpl<$Res>
+    extends _$HomeEventCopyWithImpl<$Res>
+    implements _$$HomeEventMoveToCommentScreenCopyWith<$Res> {
+  __$$HomeEventMoveToCommentScreenCopyWithImpl(
+      _$HomeEventMoveToCommentScreen _value,
+      $Res Function(_$HomeEventMoveToCommentScreen) _then)
+      : super(_value, (v) => _then(v as _$HomeEventMoveToCommentScreen));
+
+  @override
+  _$HomeEventMoveToCommentScreen get _value =>
+      super._value as _$HomeEventMoveToCommentScreen;
+
+  @override
+  $Res call({
+    Object? postId = freezed,
+  }) {
+    return _then(_$HomeEventMoveToCommentScreen(
+      postId == freezed
+          ? _value.postId
+          : postId // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
+  const _$HomeEventMoveToCommentScreen(this.postId);
+
+  @override
+  final String postId;
+
+  @override
+  String toString() {
+    return 'HomeEvent.moveToCommentScreen(postId: $postId)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeEventMoveToCommentScreen &&
+            const DeepCollectionEquality().equals(other.postId, postId));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(postId));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$HomeEventMoveToCommentScreenCopyWith<_$HomeEventMoveToCommentScreen>
+      get copyWith => __$$HomeEventMoveToCommentScreenCopyWithImpl<
+          _$HomeEventMoveToCommentScreen>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loadData,
+    required TResult Function() moveToAddPost,
+    required TResult Function(String postId) moveToCommentScreen,
+  }) {
+    return moveToCommentScreen(postId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? loadData,
+    TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
+  }) {
+    return moveToCommentScreen?.call(postId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loadData,
+    TResult Function()? moveToAddPost,
+    TResult Function(String postId)? moveToCommentScreen,
+    required TResult orElse(),
+  }) {
+    if (moveToCommentScreen != null) {
+      return moveToCommentScreen(postId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeEventLoadData value) loadData,
+    required TResult Function(HomeEventMoveToAddPost value) moveToAddPost,
+    required TResult Function(HomeEventMoveToCommentScreen value)
+        moveToCommentScreen,
+  }) {
+    return moveToCommentScreen(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeEventLoadData value)? loadData,
+    TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
+  }) {
+    return moveToCommentScreen?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeEventLoadData value)? loadData,
+    TResult Function(HomeEventMoveToAddPost value)? moveToAddPost,
+    TResult Function(HomeEventMoveToCommentScreen value)? moveToCommentScreen,
+    required TResult orElse(),
+  }) {
+    if (moveToCommentScreen != null) {
+      return moveToCommentScreen(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeEventMoveToCommentScreen implements HomeEvent {
+  const factory HomeEventMoveToCommentScreen(final String postId) =
+      _$HomeEventMoveToCommentScreen;
+
+  String get postId => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$HomeEventMoveToCommentScreenCopyWith<_$HomeEventMoveToCommentScreen>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$HomeState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<dynamic> listTopic) success,
+    required TResult Function() loading,
+    required TResult Function(Stream<List<PostModel>> listPost) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<dynamic> listTopic)? success,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<dynamic> listTopic)? success,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(HomeStateInitial value) initial,
+    required TResult Function(HomeStateLoading value) loading,
     required TResult Function(HomeStateSuccess value) success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
     TResult Function(HomeStateSuccess value)? success,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
     TResult Function(HomeStateSuccess value)? success,
     required TResult orElse(),
   }) =>
@@ -381,7 +554,8 @@ class _$HomeStateInitial implements HomeStateInitial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<dynamic> listTopic) success,
+    required TResult Function() loading,
+    required TResult Function(Stream<List<PostModel>> listPost) success,
   }) {
     return initial();
   }
@@ -390,7 +564,8 @@ class _$HomeStateInitial implements HomeStateInitial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<dynamic> listTopic)? success,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
   }) {
     return initial?.call();
   }
@@ -399,7 +574,8 @@ class _$HomeStateInitial implements HomeStateInitial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<dynamic> listTopic)? success,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -412,6 +588,7 @@ class _$HomeStateInitial implements HomeStateInitial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(HomeStateInitial value) initial,
+    required TResult Function(HomeStateLoading value) loading,
     required TResult Function(HomeStateSuccess value) success,
   }) {
     return initial(this);
@@ -421,6 +598,7 @@ class _$HomeStateInitial implements HomeStateInitial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
     TResult Function(HomeStateSuccess value)? success,
   }) {
     return initial?.call(this);
@@ -430,6 +608,7 @@ class _$HomeStateInitial implements HomeStateInitial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
     TResult Function(HomeStateSuccess value)? success,
     required TResult orElse(),
   }) {
@@ -445,11 +624,122 @@ abstract class HomeStateInitial implements HomeState {
 }
 
 /// @nodoc
+abstract class _$$HomeStateLoadingCopyWith<$Res> {
+  factory _$$HomeStateLoadingCopyWith(
+          _$HomeStateLoading value, $Res Function(_$HomeStateLoading) then) =
+      __$$HomeStateLoadingCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeStateLoadingCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res>
+    implements _$$HomeStateLoadingCopyWith<$Res> {
+  __$$HomeStateLoadingCopyWithImpl(
+      _$HomeStateLoading _value, $Res Function(_$HomeStateLoading) _then)
+      : super(_value, (v) => _then(v as _$HomeStateLoading));
+
+  @override
+  _$HomeStateLoading get _value => super._value as _$HomeStateLoading;
+}
+
+/// @nodoc
+
+class _$HomeStateLoading implements HomeStateLoading {
+  const _$HomeStateLoading();
+
+  @override
+  String toString() {
+    return 'HomeState.loading()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HomeStateLoading);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(Stream<List<PostModel>> listPost) success,
+  }) {
+    return loading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
+  }) {
+    return loading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeStateInitial value) initial,
+    required TResult Function(HomeStateLoading value) loading,
+    required TResult Function(HomeStateSuccess value) success,
+  }) {
+    return loading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateSuccess value)? success,
+  }) {
+    return loading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
+    TResult Function(HomeStateSuccess value)? success,
+    required TResult orElse(),
+  }) {
+    if (loading != null) {
+      return loading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeStateLoading implements HomeState {
+  const factory HomeStateLoading() = _$HomeStateLoading;
+}
+
+/// @nodoc
 abstract class _$$HomeStateSuccessCopyWith<$Res> {
   factory _$$HomeStateSuccessCopyWith(
           _$HomeStateSuccess value, $Res Function(_$HomeStateSuccess) then) =
       __$$HomeStateSuccessCopyWithImpl<$Res>;
-  $Res call({List<dynamic> listTopic});
+  $Res call({Stream<List<PostModel>> listPost});
 }
 
 /// @nodoc
@@ -465,13 +755,13 @@ class __$$HomeStateSuccessCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? listTopic = freezed,
+    Object? listPost = freezed,
   }) {
     return _then(_$HomeStateSuccess(
-      listTopic == freezed
-          ? _value._listTopic
-          : listTopic // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+      listPost == freezed
+          ? _value.listPost
+          : listPost // ignore: cast_nullable_to_non_nullable
+              as Stream<List<PostModel>>,
     ));
   }
 }
@@ -479,19 +769,14 @@ class __$$HomeStateSuccessCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeStateSuccess implements HomeStateSuccess {
-  const _$HomeStateSuccess(final List<dynamic> listTopic)
-      : _listTopic = listTopic;
+  const _$HomeStateSuccess(this.listPost);
 
-  final List<dynamic> _listTopic;
   @override
-  List<dynamic> get listTopic {
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_listTopic);
-  }
+  final Stream<List<PostModel>> listPost;
 
   @override
   String toString() {
-    return 'HomeState.success(listTopic: $listTopic)';
+    return 'HomeState.success(listPost: $listPost)';
   }
 
   @override
@@ -499,13 +784,12 @@ class _$HomeStateSuccess implements HomeStateSuccess {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeStateSuccess &&
-            const DeepCollectionEquality()
-                .equals(other._listTopic, _listTopic));
+            const DeepCollectionEquality().equals(other.listPost, listPost));
   }
 
   @override
   int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_listTopic));
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(listPost));
 
   @JsonKey(ignore: true)
   @override
@@ -516,29 +800,32 @@ class _$HomeStateSuccess implements HomeStateSuccess {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<dynamic> listTopic) success,
+    required TResult Function() loading,
+    required TResult Function(Stream<List<PostModel>> listPost) success,
   }) {
-    return success(listTopic);
+    return success(listPost);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<dynamic> listTopic)? success,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
   }) {
-    return success?.call(listTopic);
+    return success?.call(listPost);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<dynamic> listTopic)? success,
+    TResult Function()? loading,
+    TResult Function(Stream<List<PostModel>> listPost)? success,
     required TResult orElse(),
   }) {
     if (success != null) {
-      return success(listTopic);
+      return success(listPost);
     }
     return orElse();
   }
@@ -547,6 +834,7 @@ class _$HomeStateSuccess implements HomeStateSuccess {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(HomeStateInitial value) initial,
+    required TResult Function(HomeStateLoading value) loading,
     required TResult Function(HomeStateSuccess value) success,
   }) {
     return success(this);
@@ -556,6 +844,7 @@ class _$HomeStateSuccess implements HomeStateSuccess {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
     TResult Function(HomeStateSuccess value)? success,
   }) {
     return success?.call(this);
@@ -565,6 +854,7 @@ class _$HomeStateSuccess implements HomeStateSuccess {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(HomeStateInitial value)? initial,
+    TResult Function(HomeStateLoading value)? loading,
     TResult Function(HomeStateSuccess value)? success,
     required TResult orElse(),
   }) {
@@ -576,10 +866,10 @@ class _$HomeStateSuccess implements HomeStateSuccess {
 }
 
 abstract class HomeStateSuccess implements HomeState {
-  const factory HomeStateSuccess(final List<dynamic> listTopic) =
+  const factory HomeStateSuccess(final Stream<List<PostModel>> listPost) =
       _$HomeStateSuccess;
 
-  List<dynamic> get listTopic => throw _privateConstructorUsedError;
+  Stream<List<PostModel>> get listPost => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$$HomeStateSuccessCopyWith<_$HomeStateSuccess> get copyWith =>
       throw _privateConstructorUsedError;
