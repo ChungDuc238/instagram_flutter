@@ -7,7 +7,7 @@ import '../repositories/user_repository.dart';
 class GetUserUseCase {
   final IUserRepository repository;
   GetUserUseCase({required this.repository});
-  Future<Either<ServerException, UserModel>> call() {
-    return repository.getUser();
+  Future<Either<ServerException, UserModel>> call(String id) {
+    return repository.getUser(id);
   }
 }

@@ -20,21 +20,21 @@ mixin _$HomeEvent {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
-    required TResult Function(String postId) moveToCommentScreen,
+    required TResult Function(String postId, String uid) moveToCommentScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -121,7 +121,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
-    required TResult Function(String postId) moveToCommentScreen,
+    required TResult Function(String postId, String uid) moveToCommentScreen,
   }) {
     return loadData();
   }
@@ -131,7 +131,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
   }) {
     return loadData?.call();
   }
@@ -141,7 +141,7 @@ class _$HomeEventLoadData implements HomeEventLoadData {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (loadData != null) {
@@ -234,7 +234,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
-    required TResult Function(String postId) moveToCommentScreen,
+    required TResult Function(String postId, String uid) moveToCommentScreen,
   }) {
     return moveToAddPost();
   }
@@ -244,7 +244,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
   }) {
     return moveToAddPost?.call();
   }
@@ -254,7 +254,7 @@ class _$HomeEventMoveToAddPost implements HomeEventMoveToAddPost {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (moveToAddPost != null) {
@@ -309,7 +309,7 @@ abstract class _$$HomeEventMoveToCommentScreenCopyWith<$Res> {
           _$HomeEventMoveToCommentScreen value,
           $Res Function(_$HomeEventMoveToCommentScreen) then) =
       __$$HomeEventMoveToCommentScreenCopyWithImpl<$Res>;
-  $Res call({String postId});
+  $Res call({String postId, String uid});
 }
 
 /// @nodoc
@@ -328,11 +328,16 @@ class __$$HomeEventMoveToCommentScreenCopyWithImpl<$Res>
   @override
   $Res call({
     Object? postId = freezed,
+    Object? uid = freezed,
   }) {
     return _then(_$HomeEventMoveToCommentScreen(
       postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
+              as String,
+      uid == freezed
+          ? _value.uid
+          : uid // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -341,14 +346,16 @@ class __$$HomeEventMoveToCommentScreenCopyWithImpl<$Res>
 /// @nodoc
 
 class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
-  const _$HomeEventMoveToCommentScreen(this.postId);
+  const _$HomeEventMoveToCommentScreen(this.postId, this.uid);
 
   @override
   final String postId;
+  @override
+  final String uid;
 
   @override
   String toString() {
-    return 'HomeEvent.moveToCommentScreen(postId: $postId)';
+    return 'HomeEvent.moveToCommentScreen(postId: $postId, uid: $uid)';
   }
 
   @override
@@ -356,12 +363,15 @@ class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HomeEventMoveToCommentScreen &&
-            const DeepCollectionEquality().equals(other.postId, postId));
+            const DeepCollectionEquality().equals(other.postId, postId) &&
+            const DeepCollectionEquality().equals(other.uid, uid));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(postId));
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(postId),
+      const DeepCollectionEquality().hash(uid));
 
   @JsonKey(ignore: true)
   @override
@@ -374,9 +384,9 @@ class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
   TResult when<TResult extends Object?>({
     required TResult Function() loadData,
     required TResult Function() moveToAddPost,
-    required TResult Function(String postId) moveToCommentScreen,
+    required TResult Function(String postId, String uid) moveToCommentScreen,
   }) {
-    return moveToCommentScreen(postId);
+    return moveToCommentScreen(postId, uid);
   }
 
   @override
@@ -384,9 +394,9 @@ class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
   }) {
-    return moveToCommentScreen?.call(postId);
+    return moveToCommentScreen?.call(postId, uid);
   }
 
   @override
@@ -394,11 +404,11 @@ class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? loadData,
     TResult Function()? moveToAddPost,
-    TResult Function(String postId)? moveToCommentScreen,
+    TResult Function(String postId, String uid)? moveToCommentScreen,
     required TResult orElse(),
   }) {
     if (moveToCommentScreen != null) {
-      return moveToCommentScreen(postId);
+      return moveToCommentScreen(postId, uid);
     }
     return orElse();
   }
@@ -440,10 +450,11 @@ class _$HomeEventMoveToCommentScreen implements HomeEventMoveToCommentScreen {
 }
 
 abstract class HomeEventMoveToCommentScreen implements HomeEvent {
-  const factory HomeEventMoveToCommentScreen(final String postId) =
-      _$HomeEventMoveToCommentScreen;
+  const factory HomeEventMoveToCommentScreen(
+      final String postId, final String uid) = _$HomeEventMoveToCommentScreen;
 
   String get postId => throw _privateConstructorUsedError;
+  String get uid => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   _$$HomeEventMoveToCommentScreenCopyWith<_$HomeEventMoveToCommentScreen>
       get copyWith => throw _privateConstructorUsedError;

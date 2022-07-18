@@ -14,16 +14,16 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   GetUserUseCase getUserUseCase;
   UserBloc({required this.navigator, required this.getUserUseCase})
       : super(const UserLoadingState()) {
-    on(_getUser);
+    // on(_getUser);
   }
-  Future<void> _getUser(
-    UserInitialEvent event,
-    Emitter<UserState> emitter,
-  ) async {
-    final either = await getUserUseCase.call();
-    return either.fold(
-      (l) => emitter(const UserErrorState()),
-      (r) => emitter(UserSuccessState(r)),
-    );
-  }
+  // Future<void> _getUser(
+  //   UserInitialEvent event,
+  //   Emitter<UserState> emitter,
+  // ) async {
+  //   // final either = await getUserUseCase.call();
+  //   return either.fold(
+  //     (l) => emitter(const UserErrorState()),
+  //     (r) => emitter(UserSuccessState(r)),
+  //   );
+  // }
 }

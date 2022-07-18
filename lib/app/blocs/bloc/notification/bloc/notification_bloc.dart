@@ -2,6 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../../services/remote/firebase/cloud_messaging/config_push_notification.dart';
+import '../../../../../services/remote/firebase/cloud_messaging/sendPushMessage.use_case.dart';
 
 part 'notification_bloc.freezed.dart';
 part 'notification_event.dart';
@@ -26,6 +27,7 @@ class NotificationBloc extends Bloc<NotificationEvent, NotificationState> {
     SendNotificationEvent event,
     Emitter<NotificationState> emitter,
   ) async {
-    // await SendPushNotifcation().sendPushMessage(token, body, title);
+    await SendPushNotifcation()
+        .sendPushMessage(event.token, event.body, event.title);
   }
 }

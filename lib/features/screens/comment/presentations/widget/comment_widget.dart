@@ -6,7 +6,8 @@ import 'build_header_widget.dart';
 
 class CommentWidget extends StatelessWidget {
   final String postId;
-  const CommentWidget({required this.postId, super.key});
+  final String uid;
+  const CommentWidget({required this.uid, required this.postId, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +33,7 @@ class CommentWidget extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: BuildFooterWidget(
                   postId: postId,
+                  uid: uid,
                 ),
               ),
             ],

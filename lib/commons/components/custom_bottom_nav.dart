@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../features/bloc/bottom_nav_bloc.dart';
+
+import '../../features/blocs/bottom_nav_bloc/bottom_nav_bloc.dart';
 import '../common.dart';
 
 class CustomBottomNavWidget extends StatelessWidget {

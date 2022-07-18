@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../app/blocs/bloc/notification/bloc/notification_bloc.dart';
 import '../../../../../commons/common.dart';
 import '../../../../../core/constans/images.dart';
+import '../../../../blocs/user_bloc/user_bloc.dart';
 import '../bloc/comment_bloc.dart';
 
 class BuildFooterWidget extends StatefulWidget {
   final String postId;
+  final String uid;
   const BuildFooterWidget({
     required this.postId,
+    required this.uid,
     super.key,
   });
 
@@ -18,14 +20,20 @@ class BuildFooterWidget extends StatefulWidget {
 
 class _BuildFooterWidgetState extends State<BuildFooterWidget> {
   TextEditingController addCommentController = TextEditingController();
+  var user;
   @override
   void initState() {
+    context.read<UserBloc>().add(GetUserEvent(widget.uid));
+
     super.initState();
-    context.read<NotificationBloc>().add(const NotificationEventStarted());
   }
 
   @override
   Widget build(BuildContext context) {
+    final state = context.watch<UserBloc>().state;
+    if (state is GetUserSuccessState) {
+      user = state.user;
+    }
     return Container(
       color: Colors.white,
       child: Row(
@@ -60,7 +68,7 @@ class _BuildFooterWidgetState extends State<BuildFooterWidget> {
                     );
                 context
                     .read<NotificationBloc>()
-                    .add(const SendNotificationEvent());
+                    .add(SendNotificationEvent(user.token ?? '', '', ''));
                 addCommentController.clear();
               },
               child: const Text('Đăng'),

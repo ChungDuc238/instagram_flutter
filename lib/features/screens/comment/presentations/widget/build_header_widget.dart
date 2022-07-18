@@ -18,7 +18,7 @@ class BuildHeaderWidget extends StatefulWidget {
 class _BuildHeaderWidgetState extends State<BuildHeaderWidget> {
   @override
   void initState() {
-    context.read<PostBloc>().add(PostEvent.postComment(widget.postId));
+    context.read<PostBloc>().add(GetDetailPostEvent(widget.postId));
     super.initState();
   }
 

@@ -19,19 +19,19 @@ mixin _$NotificationEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() send,
+    required TResult Function(String token, String title, String body) send,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? send,
+    TResult Function(String token, String title, String body)? send,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? send,
+    TResult Function(String token, String title, String body)? send,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -117,7 +117,7 @@ class _$NotificationEventStarted implements NotificationEventStarted {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() send,
+    required TResult Function(String token, String title, String body) send,
   }) {
     return started();
   }
@@ -126,7 +126,7 @@ class _$NotificationEventStarted implements NotificationEventStarted {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? send,
+    TResult Function(String token, String title, String body)? send,
   }) {
     return started?.call();
   }
@@ -135,7 +135,7 @@ class _$NotificationEventStarted implements NotificationEventStarted {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? send,
+    TResult Function(String token, String title, String body)? send,
     required TResult orElse(),
   }) {
     if (started != null) {
@@ -185,6 +185,7 @@ abstract class _$$SendNotificationEventCopyWith<$Res> {
   factory _$$SendNotificationEventCopyWith(_$SendNotificationEvent value,
           $Res Function(_$SendNotificationEvent) then) =
       __$$SendNotificationEventCopyWithImpl<$Res>;
+  $Res call({String token, String title, String body});
 }
 
 /// @nodoc
@@ -197,54 +198,97 @@ class __$$SendNotificationEventCopyWithImpl<$Res>
 
   @override
   _$SendNotificationEvent get _value => super._value as _$SendNotificationEvent;
+
+  @override
+  $Res call({
+    Object? token = freezed,
+    Object? title = freezed,
+    Object? body = freezed,
+  }) {
+    return _then(_$SendNotificationEvent(
+      token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String,
+      title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
+      body == freezed
+          ? _value.body
+          : body // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 /// @nodoc
 
 class _$SendNotificationEvent implements SendNotificationEvent {
-  const _$SendNotificationEvent();
+  const _$SendNotificationEvent(this.token, this.title, this.body);
+
+  @override
+  final String token;
+  @override
+  final String title;
+  @override
+  final String body;
 
   @override
   String toString() {
-    return 'NotificationEvent.send()';
+    return 'NotificationEvent.send(token: $token, title: $title, body: $body)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$SendNotificationEvent);
+        (other.runtimeType == runtimeType &&
+            other is _$SendNotificationEvent &&
+            const DeepCollectionEquality().equals(other.token, token) &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.body, body));
   }
 
   @override
-  int get hashCode => runtimeType.hashCode;
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(token),
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(body));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$SendNotificationEventCopyWith<_$SendNotificationEvent> get copyWith =>
+      __$$SendNotificationEventCopyWithImpl<_$SendNotificationEvent>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() started,
-    required TResult Function() send,
+    required TResult Function(String token, String title, String body) send,
   }) {
-    return send();
+    return send(token, title, body);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? send,
+    TResult Function(String token, String title, String body)? send,
   }) {
-    return send?.call();
+    return send?.call(token, title, body);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? started,
-    TResult Function()? send,
+    TResult Function(String token, String title, String body)? send,
     required TResult orElse(),
   }) {
     if (send != null) {
-      return send();
+      return send(token, title, body);
     }
     return orElse();
   }
@@ -282,7 +326,16 @@ class _$SendNotificationEvent implements SendNotificationEvent {
 }
 
 abstract class SendNotificationEvent implements NotificationEvent {
-  const factory SendNotificationEvent() = _$SendNotificationEvent;
+  const factory SendNotificationEvent(
+          final String token, final String title, final String body) =
+      _$SendNotificationEvent;
+
+  String get token => throw _privateConstructorUsedError;
+  String get title => throw _privateConstructorUsedError;
+  String get body => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  _$$SendNotificationEventCopyWith<_$SendNotificationEvent> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc

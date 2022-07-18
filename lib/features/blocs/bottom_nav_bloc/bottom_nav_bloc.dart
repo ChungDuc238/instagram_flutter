@@ -2,7 +2,9 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../navigator/navigator.dart';
+import '../../navigator/navigator.dart';
+
+
 
 part 'bottom_nav_bloc.freezed.dart';
 part 'bottom_nav_event.dart';
@@ -22,9 +24,9 @@ class BottomNavBloc extends Bloc<BottomNavEvent, BottomNavState> {
       case 0:
         navigator.push(screen: const ScreenType.login());
         break;
-      case 1:
-        navigator.push(screen: const ScreenType.userProfile());
-        break;
+      // case 1:
+      //   navigator.push(screen: const ScreenType.userProfile());
+      //   break;
       case 2:
         navigator.push(screen: const ScreenType.login());
         break;

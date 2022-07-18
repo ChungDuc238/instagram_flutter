@@ -7,6 +7,5 @@ class CommentState with _$CommentState {
   const factory CommentState.loaded(Stream<List<CommentModel>> listComment) =
       CommentLoadedState;
   const factory CommentState.error() = CommentErrorState;
-  const factory CommentState.loadedPost(PostModel post) = LoadedPostState;
   const factory CommentState.postSuccess() = PostCommentSuccess;
 }

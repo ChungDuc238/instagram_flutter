@@ -36,6 +36,7 @@ class ListPostAction extends StatelessWidget {
                 context.read<HomeBloc>().add(
                       HomeEvent.moveToCommentScreen(
                         post.postId,
+                        post.uid,
                       ),
                     );
               },

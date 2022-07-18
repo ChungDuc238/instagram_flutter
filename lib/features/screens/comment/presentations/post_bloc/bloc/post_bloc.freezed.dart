@@ -18,38 +18,38 @@ final _privateConstructorUsedError = UnsupportedError(
 mixin _$PostEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String postId) postComment,
+    required TResult Function(String postId) getDetailPost,
     required TResult Function() backToPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String postId)? postComment,
+    TResult Function(String postId)? getDetailPost,
     TResult Function()? backToPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String postId)? postComment,
+    TResult Function(String postId)? getDetailPost,
     TResult Function()? backToPage,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PostCommentEvent value) postComment,
+    required TResult Function(GetDetailPostEvent value) getDetailPost,
     required TResult Function(BacktoPageEvent value) backToPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PostCommentEvent value)? postComment,
+    TResult Function(GetDetailPostEvent value)? getDetailPost,
     TResult Function(BacktoPageEvent value)? backToPage,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PostCommentEvent value)? postComment,
+    TResult Function(GetDetailPostEvent value)? getDetailPost,
     TResult Function(BacktoPageEvent value)? backToPage,
     required TResult orElse(),
   }) =>
@@ -72,29 +72,29 @@ class _$PostEventCopyWithImpl<$Res> implements $PostEventCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$$PostCommentEventCopyWith<$Res> {
-  factory _$$PostCommentEventCopyWith(
-          _$PostCommentEvent value, $Res Function(_$PostCommentEvent) then) =
-      __$$PostCommentEventCopyWithImpl<$Res>;
+abstract class _$$GetDetailPostEventCopyWith<$Res> {
+  factory _$$GetDetailPostEventCopyWith(_$GetDetailPostEvent value,
+          $Res Function(_$GetDetailPostEvent) then) =
+      __$$GetDetailPostEventCopyWithImpl<$Res>;
   $Res call({String postId});
 }
 
 /// @nodoc
-class __$$PostCommentEventCopyWithImpl<$Res>
+class __$$GetDetailPostEventCopyWithImpl<$Res>
     extends _$PostEventCopyWithImpl<$Res>
-    implements _$$PostCommentEventCopyWith<$Res> {
-  __$$PostCommentEventCopyWithImpl(
-      _$PostCommentEvent _value, $Res Function(_$PostCommentEvent) _then)
-      : super(_value, (v) => _then(v as _$PostCommentEvent));
+    implements _$$GetDetailPostEventCopyWith<$Res> {
+  __$$GetDetailPostEventCopyWithImpl(
+      _$GetDetailPostEvent _value, $Res Function(_$GetDetailPostEvent) _then)
+      : super(_value, (v) => _then(v as _$GetDetailPostEvent));
 
   @override
-  _$PostCommentEvent get _value => super._value as _$PostCommentEvent;
+  _$GetDetailPostEvent get _value => super._value as _$GetDetailPostEvent;
 
   @override
   $Res call({
     Object? postId = freezed,
   }) {
-    return _then(_$PostCommentEvent(
+    return _then(_$GetDetailPostEvent(
       postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -105,22 +105,22 @@ class __$$PostCommentEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PostCommentEvent implements PostCommentEvent {
-  const _$PostCommentEvent(this.postId);
+class _$GetDetailPostEvent implements GetDetailPostEvent {
+  const _$GetDetailPostEvent(this.postId);
 
   @override
   final String postId;
 
   @override
   String toString() {
-    return 'PostEvent.postComment(postId: $postId)';
+    return 'PostEvent.getDetailPost(postId: $postId)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PostCommentEvent &&
+            other is _$GetDetailPostEvent &&
             const DeepCollectionEquality().equals(other.postId, postId));
   }
 
@@ -130,36 +130,37 @@ class _$PostCommentEvent implements PostCommentEvent {
 
   @JsonKey(ignore: true)
   @override
-  _$$PostCommentEventCopyWith<_$PostCommentEvent> get copyWith =>
-      __$$PostCommentEventCopyWithImpl<_$PostCommentEvent>(this, _$identity);
+  _$$GetDetailPostEventCopyWith<_$GetDetailPostEvent> get copyWith =>
+      __$$GetDetailPostEventCopyWithImpl<_$GetDetailPostEvent>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String postId) postComment,
+    required TResult Function(String postId) getDetailPost,
     required TResult Function() backToPage,
   }) {
-    return postComment(postId);
+    return getDetailPost(postId);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String postId)? postComment,
+    TResult Function(String postId)? getDetailPost,
     TResult Function()? backToPage,
   }) {
-    return postComment?.call(postId);
+    return getDetailPost?.call(postId);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String postId)? postComment,
+    TResult Function(String postId)? getDetailPost,
     TResult Function()? backToPage,
     required TResult orElse(),
   }) {
-    if (postComment != null) {
-      return postComment(postId);
+    if (getDetailPost != null) {
+      return getDetailPost(postId);
     }
     return orElse();
   }
@@ -167,41 +168,41 @@ class _$PostCommentEvent implements PostCommentEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PostCommentEvent value) postComment,
+    required TResult Function(GetDetailPostEvent value) getDetailPost,
     required TResult Function(BacktoPageEvent value) backToPage,
   }) {
-    return postComment(this);
+    return getDetailPost(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PostCommentEvent value)? postComment,
+    TResult Function(GetDetailPostEvent value)? getDetailPost,
     TResult Function(BacktoPageEvent value)? backToPage,
   }) {
-    return postComment?.call(this);
+    return getDetailPost?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PostCommentEvent value)? postComment,
+    TResult Function(GetDetailPostEvent value)? getDetailPost,
     TResult Function(BacktoPageEvent value)? backToPage,
     required TResult orElse(),
   }) {
-    if (postComment != null) {
-      return postComment(this);
+    if (getDetailPost != null) {
+      return getDetailPost(this);
     }
     return orElse();
   }
 }
 
-abstract class PostCommentEvent implements PostEvent {
-  const factory PostCommentEvent(final String postId) = _$PostCommentEvent;
+abstract class GetDetailPostEvent implements PostEvent {
+  const factory GetDetailPostEvent(final String postId) = _$GetDetailPostEvent;
 
   String get postId => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$$PostCommentEventCopyWith<_$PostCommentEvent> get copyWith =>
+  _$$GetDetailPostEventCopyWith<_$GetDetailPostEvent> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -246,7 +247,7 @@ class _$BacktoPageEvent implements BacktoPageEvent {
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(String postId) postComment,
+    required TResult Function(String postId) getDetailPost,
     required TResult Function() backToPage,
   }) {
     return backToPage();
@@ -255,7 +256,7 @@ class _$BacktoPageEvent implements BacktoPageEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String postId)? postComment,
+    TResult Function(String postId)? getDetailPost,
     TResult Function()? backToPage,
   }) {
     return backToPage?.call();
@@ -264,7 +265,7 @@ class _$BacktoPageEvent implements BacktoPageEvent {
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(String postId)? postComment,
+    TResult Function(String postId)? getDetailPost,
     TResult Function()? backToPage,
     required TResult orElse(),
   }) {
@@ -277,7 +278,7 @@ class _$BacktoPageEvent implements BacktoPageEvent {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(PostCommentEvent value) postComment,
+    required TResult Function(GetDetailPostEvent value) getDetailPost,
     required TResult Function(BacktoPageEvent value) backToPage,
   }) {
     return backToPage(this);
@@ -286,7 +287,7 @@ class _$BacktoPageEvent implements BacktoPageEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(PostCommentEvent value)? postComment,
+    TResult Function(GetDetailPostEvent value)? getDetailPost,
     TResult Function(BacktoPageEvent value)? backToPage,
   }) {
     return backToPage?.call(this);
@@ -295,7 +296,7 @@ class _$BacktoPageEvent implements BacktoPageEvent {
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(PostCommentEvent value)? postComment,
+    TResult Function(GetDetailPostEvent value)? getDetailPost,
     TResult Function(BacktoPageEvent value)? backToPage,
     required TResult orElse(),
   }) {

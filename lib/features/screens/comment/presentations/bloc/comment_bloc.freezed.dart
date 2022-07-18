@@ -551,7 +551,6 @@ mixin _$CommentState {
     required TResult Function() loading,
     required TResult Function(Stream<List<CommentModel>> listComment) loaded,
     required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
     required TResult Function() postSuccess,
   }) =>
       throw _privateConstructorUsedError;
@@ -561,7 +560,6 @@ mixin _$CommentState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
   }) =>
       throw _privateConstructorUsedError;
@@ -571,7 +569,6 @@ mixin _$CommentState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
     required TResult orElse(),
   }) =>
@@ -582,7 +579,6 @@ mixin _$CommentState {
     required TResult Function(CommentLoadingState value) loading,
     required TResult Function(CommentLoadedState value) loaded,
     required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
     required TResult Function(PostCommentSuccess value) postSuccess,
   }) =>
       throw _privateConstructorUsedError;
@@ -592,7 +588,6 @@ mixin _$CommentState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
   }) =>
       throw _privateConstructorUsedError;
@@ -602,7 +597,6 @@ mixin _$CommentState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
     required TResult orElse(),
   }) =>
@@ -670,7 +664,6 @@ class _$CommentInitialState implements CommentInitialState {
     required TResult Function() loading,
     required TResult Function(Stream<List<CommentModel>> listComment) loaded,
     required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
     required TResult Function() postSuccess,
   }) {
     return initial();
@@ -683,7 +676,6 @@ class _$CommentInitialState implements CommentInitialState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
   }) {
     return initial?.call();
@@ -696,7 +688,6 @@ class _$CommentInitialState implements CommentInitialState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
     required TResult orElse(),
   }) {
@@ -713,7 +704,6 @@ class _$CommentInitialState implements CommentInitialState {
     required TResult Function(CommentLoadingState value) loading,
     required TResult Function(CommentLoadedState value) loaded,
     required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
     required TResult Function(PostCommentSuccess value) postSuccess,
   }) {
     return initial(this);
@@ -726,7 +716,6 @@ class _$CommentInitialState implements CommentInitialState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
   }) {
     return initial?.call(this);
@@ -739,7 +728,6 @@ class _$CommentInitialState implements CommentInitialState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
     required TResult orElse(),
   }) {
@@ -799,7 +787,6 @@ class _$CommentLoadingState implements CommentLoadingState {
     required TResult Function() loading,
     required TResult Function(Stream<List<CommentModel>> listComment) loaded,
     required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
     required TResult Function() postSuccess,
   }) {
     return loading();
@@ -812,7 +799,6 @@ class _$CommentLoadingState implements CommentLoadingState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
   }) {
     return loading?.call();
@@ -825,7 +811,6 @@ class _$CommentLoadingState implements CommentLoadingState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
     required TResult orElse(),
   }) {
@@ -842,7 +827,6 @@ class _$CommentLoadingState implements CommentLoadingState {
     required TResult Function(CommentLoadingState value) loading,
     required TResult Function(CommentLoadedState value) loaded,
     required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
     required TResult Function(PostCommentSuccess value) postSuccess,
   }) {
     return loading(this);
@@ -855,7 +839,6 @@ class _$CommentLoadingState implements CommentLoadingState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
   }) {
     return loading?.call(this);
@@ -868,7 +851,6 @@ class _$CommentLoadingState implements CommentLoadingState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
     required TResult orElse(),
   }) {
@@ -954,7 +936,6 @@ class _$CommentLoadedState implements CommentLoadedState {
     required TResult Function() loading,
     required TResult Function(Stream<List<CommentModel>> listComment) loaded,
     required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
     required TResult Function() postSuccess,
   }) {
     return loaded(listComment);
@@ -967,7 +948,6 @@ class _$CommentLoadedState implements CommentLoadedState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
   }) {
     return loaded?.call(listComment);
@@ -980,7 +960,6 @@ class _$CommentLoadedState implements CommentLoadedState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
     required TResult orElse(),
   }) {
@@ -997,7 +976,6 @@ class _$CommentLoadedState implements CommentLoadedState {
     required TResult Function(CommentLoadingState value) loading,
     required TResult Function(CommentLoadedState value) loaded,
     required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
     required TResult Function(PostCommentSuccess value) postSuccess,
   }) {
     return loaded(this);
@@ -1010,7 +988,6 @@ class _$CommentLoadedState implements CommentLoadedState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
   }) {
     return loaded?.call(this);
@@ -1023,7 +1000,6 @@ class _$CommentLoadedState implements CommentLoadedState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
     required TResult orElse(),
   }) {
@@ -1090,7 +1066,6 @@ class _$CommentErrorState implements CommentErrorState {
     required TResult Function() loading,
     required TResult Function(Stream<List<CommentModel>> listComment) loaded,
     required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
     required TResult Function() postSuccess,
   }) {
     return error();
@@ -1103,7 +1078,6 @@ class _$CommentErrorState implements CommentErrorState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
   }) {
     return error?.call();
@@ -1116,7 +1090,6 @@ class _$CommentErrorState implements CommentErrorState {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
     required TResult orElse(),
   }) {
@@ -1133,7 +1106,6 @@ class _$CommentErrorState implements CommentErrorState {
     required TResult Function(CommentLoadingState value) loading,
     required TResult Function(CommentLoadedState value) loaded,
     required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
     required TResult Function(PostCommentSuccess value) postSuccess,
   }) {
     return error(this);
@@ -1146,7 +1118,6 @@ class _$CommentErrorState implements CommentErrorState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
   }) {
     return error?.call(this);
@@ -1159,7 +1130,6 @@ class _$CommentErrorState implements CommentErrorState {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
     required TResult orElse(),
   }) {
@@ -1172,173 +1142,6 @@ class _$CommentErrorState implements CommentErrorState {
 
 abstract class CommentErrorState implements CommentState {
   const factory CommentErrorState() = _$CommentErrorState;
-}
-
-/// @nodoc
-abstract class _$$LoadedPostStateCopyWith<$Res> {
-  factory _$$LoadedPostStateCopyWith(
-          _$LoadedPostState value, $Res Function(_$LoadedPostState) then) =
-      __$$LoadedPostStateCopyWithImpl<$Res>;
-  $Res call({PostModel post});
-
-  $PostModelCopyWith<$Res> get post;
-}
-
-/// @nodoc
-class __$$LoadedPostStateCopyWithImpl<$Res>
-    extends _$CommentStateCopyWithImpl<$Res>
-    implements _$$LoadedPostStateCopyWith<$Res> {
-  __$$LoadedPostStateCopyWithImpl(
-      _$LoadedPostState _value, $Res Function(_$LoadedPostState) _then)
-      : super(_value, (v) => _then(v as _$LoadedPostState));
-
-  @override
-  _$LoadedPostState get _value => super._value as _$LoadedPostState;
-
-  @override
-  $Res call({
-    Object? post = freezed,
-  }) {
-    return _then(_$LoadedPostState(
-      post == freezed
-          ? _value.post
-          : post // ignore: cast_nullable_to_non_nullable
-              as PostModel,
-    ));
-  }
-
-  @override
-  $PostModelCopyWith<$Res> get post {
-    return $PostModelCopyWith<$Res>(_value.post, (value) {
-      return _then(_value.copyWith(post: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$LoadedPostState implements LoadedPostState {
-  const _$LoadedPostState(this.post);
-
-  @override
-  final PostModel post;
-
-  @override
-  String toString() {
-    return 'CommentState.loadedPost(post: $post)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$LoadedPostState &&
-            const DeepCollectionEquality().equals(other.post, post));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(post));
-
-  @JsonKey(ignore: true)
-  @override
-  _$$LoadedPostStateCopyWith<_$LoadedPostState> get copyWith =>
-      __$$LoadedPostStateCopyWithImpl<_$LoadedPostState>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(Stream<List<CommentModel>> listComment) loaded,
-    required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
-    required TResult Function() postSuccess,
-  }) {
-    return loadedPost(post);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(Stream<List<CommentModel>> listComment)? loaded,
-    TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
-    TResult Function()? postSuccess,
-  }) {
-    return loadedPost?.call(post);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(Stream<List<CommentModel>> listComment)? loaded,
-    TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
-    TResult Function()? postSuccess,
-    required TResult orElse(),
-  }) {
-    if (loadedPost != null) {
-      return loadedPost(post);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(CommentInitialState value) initial,
-    required TResult Function(CommentLoadingState value) loading,
-    required TResult Function(CommentLoadedState value) loaded,
-    required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
-    required TResult Function(PostCommentSuccess value) postSuccess,
-  }) {
-    return loadedPost(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(CommentInitialState value)? initial,
-    TResult Function(CommentLoadingState value)? loading,
-    TResult Function(CommentLoadedState value)? loaded,
-    TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
-    TResult Function(PostCommentSuccess value)? postSuccess,
-  }) {
-    return loadedPost?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(CommentInitialState value)? initial,
-    TResult Function(CommentLoadingState value)? loading,
-    TResult Function(CommentLoadedState value)? loaded,
-    TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
-    TResult Function(PostCommentSuccess value)? postSuccess,
-    required TResult orElse(),
-  }) {
-    if (loadedPost != null) {
-      return loadedPost(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class LoadedPostState implements CommentState {
-  const factory LoadedPostState(final PostModel post) = _$LoadedPostState;
-
-  PostModel get post => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  _$$LoadedPostStateCopyWith<_$LoadedPostState> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1386,7 +1189,6 @@ class _$PostCommentSuccess implements PostCommentSuccess {
     required TResult Function() loading,
     required TResult Function(Stream<List<CommentModel>> listComment) loaded,
     required TResult Function() error,
-    required TResult Function(PostModel post) loadedPost,
     required TResult Function() postSuccess,
   }) {
     return postSuccess();
@@ -1399,7 +1201,6 @@ class _$PostCommentSuccess implements PostCommentSuccess {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
   }) {
     return postSuccess?.call();
@@ -1412,7 +1213,6 @@ class _$PostCommentSuccess implements PostCommentSuccess {
     TResult Function()? loading,
     TResult Function(Stream<List<CommentModel>> listComment)? loaded,
     TResult Function()? error,
-    TResult Function(PostModel post)? loadedPost,
     TResult Function()? postSuccess,
     required TResult orElse(),
   }) {
@@ -1429,7 +1229,6 @@ class _$PostCommentSuccess implements PostCommentSuccess {
     required TResult Function(CommentLoadingState value) loading,
     required TResult Function(CommentLoadedState value) loaded,
     required TResult Function(CommentErrorState value) error,
-    required TResult Function(LoadedPostState value) loadedPost,
     required TResult Function(PostCommentSuccess value) postSuccess,
   }) {
     return postSuccess(this);
@@ -1442,7 +1241,6 @@ class _$PostCommentSuccess implements PostCommentSuccess {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
   }) {
     return postSuccess?.call(this);
@@ -1455,7 +1253,6 @@ class _$PostCommentSuccess implements PostCommentSuccess {
     TResult Function(CommentLoadingState value)? loading,
     TResult Function(CommentLoadedState value)? loaded,
     TResult Function(CommentErrorState value)? error,
-    TResult Function(LoadedPostState value)? loadedPost,
     TResult Function(PostCommentSuccess value)? postSuccess,
     required TResult orElse(),
   }) {

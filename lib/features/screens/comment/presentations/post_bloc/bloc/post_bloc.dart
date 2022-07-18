@@ -22,7 +22,7 @@ class PostBloc extends Bloc<PostEvent, PostState> {
   }
 
   Future<void> _getPost(
-    PostCommentEvent event,
+    GetDetailPostEvent event,
     Emitter<PostState> emitter,
   ) async {
     final either = await getPostUseCase.call(event.postId);
