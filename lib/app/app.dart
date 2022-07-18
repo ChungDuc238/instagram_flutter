@@ -5,6 +5,7 @@ import '../commons/common.dart';
 import '../features/navigator/navigator.dart';
 import '../utils/utils.dart';
 import 'blocs/bloc/app_configures_bloc.dart';
+import 'blocs/bloc/notification/bloc/notification_bloc.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
@@ -14,9 +15,13 @@ class App extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AppConfiguresBloc()),
+        BlocProvider<NotificationBloc>(create: (context) => NotificationBloc()),
       ],
       child: BlocBuilder<AppConfiguresBloc, AppConfiguresState>(
         builder: (context, state) {
+          context
+              .read<NotificationBloc>()
+              .add(const NotificationEventStarted());
           return MaterialApp(
             debugShowCheckedModeBanner: false,
             localizationsDelegates: const [

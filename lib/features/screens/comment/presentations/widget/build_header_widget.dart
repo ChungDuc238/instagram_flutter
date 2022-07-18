@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../../../commons/common.dart';
 import '../../../../../commons/components/comment_box_widget.dart';
-import '../bloc/comment_bloc.dart';
+import '../post_bloc/bloc/post_bloc.dart';
 
 class BuildHeaderWidget extends StatefulWidget {
   final String postId;
@@ -18,13 +18,13 @@ class BuildHeaderWidget extends StatefulWidget {
 class _BuildHeaderWidgetState extends State<BuildHeaderWidget> {
   @override
   void initState() {
-    context.read<CommentBloc>().add(GetPostEvent(widget.postId));
+    context.read<PostBloc>().add(PostEvent.postComment(widget.postId));
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    final state = context.watch<CommentBloc>().state;
+    final state = context.watch<PostBloc>().state;
     return SizedBox(
       width: double.infinity,
       child: Padding(
@@ -37,9 +37,12 @@ class _BuildHeaderWidgetState extends State<BuildHeaderWidget> {
               child: Row(
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      context.read<PostBloc>().add(const BacktoPageEvent());
+                    },
                     child: const Icon(Icons.arrow_back),
                   ),
+                  xWidth1,
                   Text(
                     'Bình luận',
                     style: textstyle.copyWith(fontSize: 18),

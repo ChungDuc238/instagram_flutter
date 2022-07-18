@@ -1,11 +1,11 @@
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../../../entities/models/comments/comment_model.dart';
-import '../../../../../entities/models/post/post_model.dart';
+import '../../../../../entities/entities.dart';
 import '../../../../navigator/navigator.dart';
 import '../../domains/usecases/get_comment_use_case.dart';
 import '../../domains/usecases/get_post_use_case.dart';
+import '../../domains/usecases/post_comment_use_case.dart';
 
 part 'comment_bloc.freezed.dart';
 part 'comment_event.dart';
@@ -15,13 +15,15 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
   AppNavigator navigator;
   GetCommentUseCase getCommentUseCase;
   GetPostUseCase getPostUseCase;
+  PostCommentUseCase postCommentUseCase;
   CommentBloc({
     required this.getCommentUseCase,
     required this.navigator,
     required this.getPostUseCase,
+    required this.postCommentUseCase,
   }) : super(const CommentInitialState()) {
     on(_getListComment);
-    on(_getPost);
+    on(_postComment);
   }
   Future<void> _getListComment(
     CommentLoadDataEvent event,
@@ -34,11 +36,12 @@ class CommentBloc extends Bloc<CommentEvent, CommentState> {
     );
   }
 
-  Future<void> _getPost(
-    GetPostEvent event,
+  Future<void> _postComment(
+    PostCommentEvent event,
     Emitter<CommentState> emitter,
   ) async {
-    final either = await getPostUseCase.call(event.postId);
-    either.fold((l) => l, (r) => emitter(LoadedPostState(r)));
+    final either =
+        await postCommentUseCase.call(event.postId, event.theComment);
+    either.fold((l) => null, (r) => const PostCommentSuccess());
   }
 }

@@ -25,6 +25,7 @@ mixin _$UserModel {
   String? get userName => throw _privateConstructorUsedError;
   String? get photoUrl => throw _privateConstructorUsedError;
   String? get displayName => throw _privateConstructorUsedError;
+  String? get token => throw _privateConstructorUsedError;
   Map<dynamic, dynamic>? get following => throw _privateConstructorUsedError;
   Map<dynamic, dynamic>? get followers => throw _privateConstructorUsedError;
 
@@ -44,6 +45,7 @@ abstract class $UserModelCopyWith<$Res> {
       String? userName,
       String? photoUrl,
       String? displayName,
+      String? token,
       Map<dynamic, dynamic>? following,
       Map<dynamic, dynamic>? followers});
 }
@@ -63,6 +65,7 @@ class _$UserModelCopyWithImpl<$Res> implements $UserModelCopyWith<$Res> {
     Object? userName = freezed,
     Object? photoUrl = freezed,
     Object? displayName = freezed,
+    Object? token = freezed,
     Object? following = freezed,
     Object? followers = freezed,
   }) {
@@ -86,6 +89,10 @@ class _$UserModelCopyWithImpl<$Res> implements $UserModelCopyWith<$Res> {
       displayName: displayName == freezed
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
+              as String?,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
               as String?,
       following: following == freezed
           ? _value.following
@@ -111,6 +118,7 @@ abstract class _$$_UserModelCopyWith<$Res> implements $UserModelCopyWith<$Res> {
       String? userName,
       String? photoUrl,
       String? displayName,
+      String? token,
       Map<dynamic, dynamic>? following,
       Map<dynamic, dynamic>? followers});
 }
@@ -132,6 +140,7 @@ class __$$_UserModelCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
     Object? userName = freezed,
     Object? photoUrl = freezed,
     Object? displayName = freezed,
+    Object? token = freezed,
     Object? following = freezed,
     Object? followers = freezed,
   }) {
@@ -156,6 +165,10 @@ class __$$_UserModelCopyWithImpl<$Res> extends _$UserModelCopyWithImpl<$Res>
           ? _value.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String?,
+      token: token == freezed
+          ? _value.token
+          : token // ignore: cast_nullable_to_non_nullable
+              as String?,
       following: following == freezed
           ? _value._following
           : following // ignore: cast_nullable_to_non_nullable
@@ -177,6 +190,7 @@ class _$_UserModel implements _UserModel {
       this.userName = '',
       this.photoUrl = '',
       this.displayName = '',
+      this.token = '',
       final Map<dynamic, dynamic>? following = const {},
       final Map<dynamic, dynamic>? followers = const {}})
       : _following = following,
@@ -199,6 +213,9 @@ class _$_UserModel implements _UserModel {
   @override
   @JsonKey()
   final String? displayName;
+  @override
+  @JsonKey()
+  final String? token;
   final Map<dynamic, dynamic>? _following;
   @override
   @JsonKey()
@@ -221,7 +238,7 @@ class _$_UserModel implements _UserModel {
 
   @override
   String toString() {
-    return 'UserModel(id: $id, email: $email, userName: $userName, photoUrl: $photoUrl, displayName: $displayName, following: $following, followers: $followers)';
+    return 'UserModel(id: $id, email: $email, userName: $userName, photoUrl: $photoUrl, displayName: $displayName, token: $token, following: $following, followers: $followers)';
   }
 
   @override
@@ -235,6 +252,7 @@ class _$_UserModel implements _UserModel {
             const DeepCollectionEquality().equals(other.photoUrl, photoUrl) &&
             const DeepCollectionEquality()
                 .equals(other.displayName, displayName) &&
+            const DeepCollectionEquality().equals(other.token, token) &&
             const DeepCollectionEquality()
                 .equals(other._following, _following) &&
             const DeepCollectionEquality()
@@ -250,6 +268,7 @@ class _$_UserModel implements _UserModel {
       const DeepCollectionEquality().hash(userName),
       const DeepCollectionEquality().hash(photoUrl),
       const DeepCollectionEquality().hash(displayName),
+      const DeepCollectionEquality().hash(token),
       const DeepCollectionEquality().hash(_following),
       const DeepCollectionEquality().hash(_followers));
 
@@ -271,6 +290,7 @@ abstract class _UserModel implements UserModel {
       final String? userName,
       final String? photoUrl,
       final String? displayName,
+      final String? token,
       final Map<dynamic, dynamic>? following,
       final Map<dynamic, dynamic>? followers}) = _$_UserModel;
 
@@ -287,6 +307,8 @@ abstract class _UserModel implements UserModel {
   String? get photoUrl => throw _privateConstructorUsedError;
   @override
   String? get displayName => throw _privateConstructorUsedError;
+  @override
+  String? get token => throw _privateConstructorUsedError;
   @override
   Map<dynamic, dynamic>? get following => throw _privateConstructorUsedError;
   @override

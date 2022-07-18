@@ -24,7 +24,8 @@ mixin _$CommentModel {
   String get whoCommentId => throw _privateConstructorUsedError;
   String get postId => throw _privateConstructorUsedError;
   String get theComment => throw _privateConstructorUsedError;
-  UserModel? get whoCommentInfo => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get whoCommentInfo =>
+      throw _privateConstructorUsedError;
   String get commentUid => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -43,10 +44,8 @@ abstract class $CommentModelCopyWith<$Res> {
       String whoCommentId,
       String postId,
       String theComment,
-      UserModel? whoCommentInfo,
+      Map<String, dynamic>? whoCommentInfo,
       String commentUid});
-
-  $UserModelCopyWith<$Res>? get whoCommentInfo;
 }
 
 /// @nodoc
@@ -86,23 +85,12 @@ class _$CommentModelCopyWithImpl<$Res> implements $CommentModelCopyWith<$Res> {
       whoCommentInfo: whoCommentInfo == freezed
           ? _value.whoCommentInfo
           : whoCommentInfo // ignore: cast_nullable_to_non_nullable
-              as UserModel?,
+              as Map<String, dynamic>?,
       commentUid: commentUid == freezed
           ? _value.commentUid
           : commentUid // ignore: cast_nullable_to_non_nullable
               as String,
     ));
-  }
-
-  @override
-  $UserModelCopyWith<$Res>? get whoCommentInfo {
-    if (_value.whoCommentInfo == null) {
-      return null;
-    }
-
-    return $UserModelCopyWith<$Res>(_value.whoCommentInfo!, (value) {
-      return _then(_value.copyWith(whoCommentInfo: value));
-    });
   }
 }
 
@@ -118,11 +106,8 @@ abstract class _$$_CommentModelCopyWith<$Res>
       String whoCommentId,
       String postId,
       String theComment,
-      UserModel? whoCommentInfo,
+      Map<String, dynamic>? whoCommentInfo,
       String commentUid});
-
-  @override
-  $UserModelCopyWith<$Res>? get whoCommentInfo;
 }
 
 /// @nodoc
@@ -163,9 +148,9 @@ class __$$_CommentModelCopyWithImpl<$Res>
           : theComment // ignore: cast_nullable_to_non_nullable
               as String,
       whoCommentInfo: whoCommentInfo == freezed
-          ? _value.whoCommentInfo
+          ? _value._whoCommentInfo
           : whoCommentInfo // ignore: cast_nullable_to_non_nullable
-              as UserModel?,
+              as Map<String, dynamic>?,
       commentUid: commentUid == freezed
           ? _value.commentUid
           : commentUid // ignore: cast_nullable_to_non_nullable
@@ -182,8 +167,9 @@ class _$_CommentModel implements _CommentModel {
       required this.whoCommentId,
       required this.postId,
       this.theComment = '',
-      this.whoCommentInfo,
-      this.commentUid = ''});
+      final Map<String, dynamic>? whoCommentInfo,
+      this.commentUid = ''})
+      : _whoCommentInfo = whoCommentInfo;
 
   factory _$_CommentModel.fromJson(Map<String, dynamic> json) =>
       _$$_CommentModelFromJson(json);
@@ -197,8 +183,15 @@ class _$_CommentModel implements _CommentModel {
   @override
   @JsonKey()
   final String theComment;
+  final Map<String, dynamic>? _whoCommentInfo;
   @override
-  final UserModel? whoCommentInfo;
+  Map<String, dynamic>? get whoCommentInfo {
+    final value = _whoCommentInfo;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableMapView(value);
+  }
+
   @override
   @JsonKey()
   final String commentUid;
@@ -221,7 +214,7 @@ class _$_CommentModel implements _CommentModel {
             const DeepCollectionEquality()
                 .equals(other.theComment, theComment) &&
             const DeepCollectionEquality()
-                .equals(other.whoCommentInfo, whoCommentInfo) &&
+                .equals(other._whoCommentInfo, _whoCommentInfo) &&
             const DeepCollectionEquality()
                 .equals(other.commentUid, commentUid));
   }
@@ -234,7 +227,7 @@ class _$_CommentModel implements _CommentModel {
       const DeepCollectionEquality().hash(whoCommentId),
       const DeepCollectionEquality().hash(postId),
       const DeepCollectionEquality().hash(theComment),
-      const DeepCollectionEquality().hash(whoCommentInfo),
+      const DeepCollectionEquality().hash(_whoCommentInfo),
       const DeepCollectionEquality().hash(commentUid));
 
   @JsonKey(ignore: true)
@@ -254,7 +247,7 @@ abstract class _CommentModel implements CommentModel {
       required final String whoCommentId,
       required final String postId,
       final String theComment,
-      final UserModel? whoCommentInfo,
+      final Map<String, dynamic>? whoCommentInfo,
       final String commentUid}) = _$_CommentModel;
 
   factory _CommentModel.fromJson(Map<String, dynamic> json) =
@@ -269,7 +262,8 @@ abstract class _CommentModel implements CommentModel {
   @override
   String get theComment => throw _privateConstructorUsedError;
   @override
-  UserModel? get whoCommentInfo => throw _privateConstructorUsedError;
+  Map<String, dynamic>? get whoCommentInfo =>
+      throw _privateConstructorUsedError;
   @override
   String get commentUid => throw _privateConstructorUsedError;
   @override

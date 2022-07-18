@@ -37,7 +37,9 @@ class _BuildBodyWidgetState extends State<BuildBodyWidget> {
                   ...List.generate(
                     snapshot.data!.length,
                     (index) => CommentBoxWidget(
-                      caption: snapshot.data?[index].postId,
+                      caption: snapshot.data?[index].theComment,
+                      userName:
+                          snapshot.data?[index].whoCommentInfo?['userName'],
                     ),
                   ),
                 ],

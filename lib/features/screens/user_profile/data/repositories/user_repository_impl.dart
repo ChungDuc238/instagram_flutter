@@ -1,4 +1,5 @@
 import 'package:dartz/dartz.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../../../core/error/exception.dart';
 import '../../../../../entities/models/user_model.dart';
@@ -8,6 +9,7 @@ import '../../domains/repositories/user_repository.dart';
 class UserRepositoryImpl implements IUserRepository {
   @override
   Future<Either<ServerException, UserModel>> getUser() {
+   final uid = FirebaseAuth.instance.currentUser?.uid;
     return GetUserUseCaseFirestore().getUserUseCase();
   }
 }

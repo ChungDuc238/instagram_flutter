@@ -11,7 +11,7 @@ class CommentModel with _$CommentModel{
     required String whoCommentId,
     required String postId,
     @Default('') String theComment,
-    UserModel? whoCommentInfo,
+    Map<String, dynamic>? whoCommentInfo,
     @Default('') String commentUid,
   }) = _CommentModel;
   factory CommentModel.fromJson(Map<String, dynamic> json) =>

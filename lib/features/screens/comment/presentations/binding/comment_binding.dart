@@ -5,6 +5,7 @@ import '../../../../navigator/navigator.dart';
 import '../../data/repositories/comment_repository_impl.dart';
 import '../../domains/usecases/get_comment_use_case.dart';
 import '../../domains/usecases/get_post_use_case.dart';
+import '../../domains/usecases/post_comment_use_case.dart';
 import '../bloc/comment_bloc.dart';
 
 class CommentBinding {
@@ -14,6 +15,7 @@ class CommentBinding {
     return CommentBloc(
       getCommentUseCase: GetCommentUseCase(repository: repository),
       getPostUseCase: GetPostUseCase(repository: repository),
+      postCommentUseCase: PostCommentUseCase(repository: repository),
       navigator: AppNavigator.fromContext(context),
     );
   }

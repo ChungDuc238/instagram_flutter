@@ -6,10 +6,12 @@ import '../common.dart';
 class CommentBoxWidget extends StatelessWidget {
   final String? image;
   final String? caption;
+  final String? userName;
   const CommentBoxWidget({
     Key? key,
     this.image,
     this.caption,
+    this.userName,
   }) : super(
           key: key,
         );
@@ -25,9 +27,22 @@ class CommentBoxWidget extends StatelessWidget {
             backgroundImage: NetworkImage(image ?? Images.imageAvatar),
           ),
         ),
-        Text(
-          caption ?? '',
-          style: textstyle.copyWith(fontSize: 18),
+        if (userName == null)
+          Container()
+        else
+          Padding(
+            padding: const EdgeInsets.only(right: 8),
+            child: Text(
+              userName!,
+              style:
+                  textstyle.copyWith(fontWeight: FontWeight.bold, fontSize: 14),
+            ),
+          ),
+        Flexible(
+          child: Text(
+            caption ?? '',
+            style: textstyle.copyWith(fontSize: 14),
+          ),
         ),
       ],
     );

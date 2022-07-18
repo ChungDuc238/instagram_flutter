@@ -8,4 +8,5 @@ class CommentState with _$CommentState {
       CommentLoadedState;
   const factory CommentState.error() = CommentErrorState;
   const factory CommentState.loadedPost(PostModel post) = LoadedPostState;
+  const factory CommentState.postSuccess() = PostCommentSuccess;
 }

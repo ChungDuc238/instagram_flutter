@@ -9,4 +9,8 @@ abstract class ICommentRepository {
     String postId,
   );
   Future<Either<ServerException, PostModel>> getPost(String postId);
+  Future<Either<ServerException, bool>> postComment(
+    String postId,
+    String theComment,
+  );
 }

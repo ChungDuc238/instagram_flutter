@@ -12,9 +12,7 @@ _$_CommentModel _$$_CommentModelFromJson(Map<String, dynamic> json) =>
       whoCommentId: json['whoCommentId'] as String,
       postId: json['postId'] as String,
       theComment: json['theComment'] as String? ?? '',
-      whoCommentInfo: json['whoCommentInfo'] == null
-          ? null
-          : UserModel.fromJson(json['whoCommentInfo'] as Map<String, dynamic>),
+      whoCommentInfo: json['whoCommentInfo'] as Map<String, dynamic>?,
       commentUid: json['commentUid'] as String? ?? '',
     );
 

@@ -13,7 +13,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   AppNavigator navigator;
   GetListPostUseCase getListPostUseCase;
   HomeBloc({required this.navigator, required this.getListPostUseCase})
-      : super(const HomeStateLoading()) {
+      : super(const _$HomeStateInitial()) {
     on(_moveToAddPost);
     on(_loadData);
     on(_moveToCommentScreen);

@@ -3,7 +3,9 @@ import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../../../../../core/core.dart';
+import '../../../../../entities/entities.dart';
 import '../../../../../entities/models/comments/comment_model.dart';
+import 'get_user_firestore_use_case.dart';
 
 class PostCommentUseCaseFirestore {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -14,11 +16,16 @@ class PostCommentUseCaseFirestore {
     final CollectionReference collectionRef =
         _firestore.collection('posts').doc(postId).collection('comments');
     try {
+      final whoComentInfo = await GetUserUseCaseFirestore().getUserUseCase();
+      UserModel? user;
+      whoComentInfo.fold((l) => null, (r) => user = r);
       final comment = CommentModel(
         datePublished: DateTime.now().toString(),
         whoCommentId: FirebaseAuth.instance.currentUser!.uid,
         postId: postId,
         theComment: theComment,
+        whoCommentInfo: user?.toJson(),
+        commentUid: collectionRef.id,
       );
       await collectionRef.doc().set(comment.toJson());
       return const Right(true);
