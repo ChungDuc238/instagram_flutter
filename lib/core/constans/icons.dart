@@ -6,4 +6,5 @@ class IconList {
   static const String iconSearch = 'assets/icons/search.png';
   static const String iconShare = 'assets/icons/share.png';
   static const String iconVideo = 'assets/icons/video.png';
+  static const String iconIsLike = 'assets/icons/heart.png';
 }

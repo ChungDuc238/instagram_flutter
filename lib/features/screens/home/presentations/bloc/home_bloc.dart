@@ -43,6 +43,6 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     HomeEventMoveToCommentScreen event,
     Emitter<HomeState> emitter,
   ) {
-    navigator.push(screen: ScreenType.comment(event.postId, event.uid));
+    navigator.push(screen: ScreenType.post(event.postId, event.uid));
   }
 }

@@ -6,8 +6,8 @@ class ScreenType with _$ScreenType {
   const factory ScreenType.home() = ScreenTypeHome;
   const factory ScreenType.addPost() = ScreenTypeAddPost;
   const factory ScreenType.signUp() = ScreenTypeSignUp;
-  const factory ScreenType.comment(String postId, String uid) =
-      ScreenTypeComment;
+  const factory ScreenType.post(String postId, String uid) =
+      ScreenTypePost;
 }
 
 class ScreentTypeHelper {
@@ -17,11 +17,11 @@ class ScreentTypeHelper {
       home: HomePage.new,
       addPost: AddPostPage.new,
       signUp: SignUpPage.new,
-      comment: (
+      post: (
         postId,
         uid,
       ) =>
-          CommentPage(
+          PostPage(
         postId: postId,
         uid: uid,
       ),
@@ -34,7 +34,7 @@ class ScreentTypeHelper {
       home: () => 'Home',
       addPost: () => 'AddPost',
       signUp: () => 'SignUp',
-      comment: (postId, uid) => 'Comment',
+      post: (postId, uid) => 'Post',
     );
   }
 }

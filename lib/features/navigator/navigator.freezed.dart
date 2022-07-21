@@ -174,7 +174,7 @@ mixin _$ScreenType {
     required TResult Function() home,
     required TResult Function() addPost,
     required TResult Function() signUp,
-    required TResult Function(String postId, String uid) comment,
+    required TResult Function(String postId, String uid) post,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -183,7 +183,7 @@ mixin _$ScreenType {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -192,7 +192,7 @@ mixin _$ScreenType {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -202,7 +202,7 @@ mixin _$ScreenType {
     required TResult Function(ScreenTypeHome value) home,
     required TResult Function(ScreenTypeAddPost value) addPost,
     required TResult Function(ScreenTypeSignUp value) signUp,
-    required TResult Function(ScreenTypeComment value) comment,
+    required TResult Function(ScreenTypePost value) post,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -211,7 +211,7 @@ mixin _$ScreenType {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -220,7 +220,7 @@ mixin _$ScreenType {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -287,7 +287,7 @@ class _$ScreenTypeLogin implements ScreenTypeLogin {
     required TResult Function() home,
     required TResult Function() addPost,
     required TResult Function() signUp,
-    required TResult Function(String postId, String uid) comment,
+    required TResult Function(String postId, String uid) post,
   }) {
     return login();
   }
@@ -299,7 +299,7 @@ class _$ScreenTypeLogin implements ScreenTypeLogin {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
   }) {
     return login?.call();
   }
@@ -311,7 +311,7 @@ class _$ScreenTypeLogin implements ScreenTypeLogin {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -327,7 +327,7 @@ class _$ScreenTypeLogin implements ScreenTypeLogin {
     required TResult Function(ScreenTypeHome value) home,
     required TResult Function(ScreenTypeAddPost value) addPost,
     required TResult Function(ScreenTypeSignUp value) signUp,
-    required TResult Function(ScreenTypeComment value) comment,
+    required TResult Function(ScreenTypePost value) post,
   }) {
     return login(this);
   }
@@ -339,7 +339,7 @@ class _$ScreenTypeLogin implements ScreenTypeLogin {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
   }) {
     return login?.call(this);
   }
@@ -351,7 +351,7 @@ class _$ScreenTypeLogin implements ScreenTypeLogin {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
     required TResult orElse(),
   }) {
     if (login != null) {
@@ -410,7 +410,7 @@ class _$ScreenTypeHome implements ScreenTypeHome {
     required TResult Function() home,
     required TResult Function() addPost,
     required TResult Function() signUp,
-    required TResult Function(String postId, String uid) comment,
+    required TResult Function(String postId, String uid) post,
   }) {
     return home();
   }
@@ -422,7 +422,7 @@ class _$ScreenTypeHome implements ScreenTypeHome {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
   }) {
     return home?.call();
   }
@@ -434,7 +434,7 @@ class _$ScreenTypeHome implements ScreenTypeHome {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
     required TResult orElse(),
   }) {
     if (home != null) {
@@ -450,7 +450,7 @@ class _$ScreenTypeHome implements ScreenTypeHome {
     required TResult Function(ScreenTypeHome value) home,
     required TResult Function(ScreenTypeAddPost value) addPost,
     required TResult Function(ScreenTypeSignUp value) signUp,
-    required TResult Function(ScreenTypeComment value) comment,
+    required TResult Function(ScreenTypePost value) post,
   }) {
     return home(this);
   }
@@ -462,7 +462,7 @@ class _$ScreenTypeHome implements ScreenTypeHome {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
   }) {
     return home?.call(this);
   }
@@ -474,7 +474,7 @@ class _$ScreenTypeHome implements ScreenTypeHome {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
     required TResult orElse(),
   }) {
     if (home != null) {
@@ -533,7 +533,7 @@ class _$ScreenTypeAddPost implements ScreenTypeAddPost {
     required TResult Function() home,
     required TResult Function() addPost,
     required TResult Function() signUp,
-    required TResult Function(String postId, String uid) comment,
+    required TResult Function(String postId, String uid) post,
   }) {
     return addPost();
   }
@@ -545,7 +545,7 @@ class _$ScreenTypeAddPost implements ScreenTypeAddPost {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
   }) {
     return addPost?.call();
   }
@@ -557,7 +557,7 @@ class _$ScreenTypeAddPost implements ScreenTypeAddPost {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
     required TResult orElse(),
   }) {
     if (addPost != null) {
@@ -573,7 +573,7 @@ class _$ScreenTypeAddPost implements ScreenTypeAddPost {
     required TResult Function(ScreenTypeHome value) home,
     required TResult Function(ScreenTypeAddPost value) addPost,
     required TResult Function(ScreenTypeSignUp value) signUp,
-    required TResult Function(ScreenTypeComment value) comment,
+    required TResult Function(ScreenTypePost value) post,
   }) {
     return addPost(this);
   }
@@ -585,7 +585,7 @@ class _$ScreenTypeAddPost implements ScreenTypeAddPost {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
   }) {
     return addPost?.call(this);
   }
@@ -597,7 +597,7 @@ class _$ScreenTypeAddPost implements ScreenTypeAddPost {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
     required TResult orElse(),
   }) {
     if (addPost != null) {
@@ -656,7 +656,7 @@ class _$ScreenTypeSignUp implements ScreenTypeSignUp {
     required TResult Function() home,
     required TResult Function() addPost,
     required TResult Function() signUp,
-    required TResult Function(String postId, String uid) comment,
+    required TResult Function(String postId, String uid) post,
   }) {
     return signUp();
   }
@@ -668,7 +668,7 @@ class _$ScreenTypeSignUp implements ScreenTypeSignUp {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
   }) {
     return signUp?.call();
   }
@@ -680,7 +680,7 @@ class _$ScreenTypeSignUp implements ScreenTypeSignUp {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -696,7 +696,7 @@ class _$ScreenTypeSignUp implements ScreenTypeSignUp {
     required TResult Function(ScreenTypeHome value) home,
     required TResult Function(ScreenTypeAddPost value) addPost,
     required TResult Function(ScreenTypeSignUp value) signUp,
-    required TResult Function(ScreenTypeComment value) comment,
+    required TResult Function(ScreenTypePost value) post,
   }) {
     return signUp(this);
   }
@@ -708,7 +708,7 @@ class _$ScreenTypeSignUp implements ScreenTypeSignUp {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
   }) {
     return signUp?.call(this);
   }
@@ -720,7 +720,7 @@ class _$ScreenTypeSignUp implements ScreenTypeSignUp {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
     required TResult orElse(),
   }) {
     if (signUp != null) {
@@ -735,30 +735,30 @@ abstract class ScreenTypeSignUp implements ScreenType {
 }
 
 /// @nodoc
-abstract class _$$ScreenTypeCommentCopyWith<$Res> {
-  factory _$$ScreenTypeCommentCopyWith(
-          _$ScreenTypeComment value, $Res Function(_$ScreenTypeComment) then) =
-      __$$ScreenTypeCommentCopyWithImpl<$Res>;
+abstract class _$$ScreenTypePostCopyWith<$Res> {
+  factory _$$ScreenTypePostCopyWith(
+          _$ScreenTypePost value, $Res Function(_$ScreenTypePost) then) =
+      __$$ScreenTypePostCopyWithImpl<$Res>;
   $Res call({String postId, String uid});
 }
 
 /// @nodoc
-class __$$ScreenTypeCommentCopyWithImpl<$Res>
+class __$$ScreenTypePostCopyWithImpl<$Res>
     extends _$ScreenTypeCopyWithImpl<$Res>
-    implements _$$ScreenTypeCommentCopyWith<$Res> {
-  __$$ScreenTypeCommentCopyWithImpl(
-      _$ScreenTypeComment _value, $Res Function(_$ScreenTypeComment) _then)
-      : super(_value, (v) => _then(v as _$ScreenTypeComment));
+    implements _$$ScreenTypePostCopyWith<$Res> {
+  __$$ScreenTypePostCopyWithImpl(
+      _$ScreenTypePost _value, $Res Function(_$ScreenTypePost) _then)
+      : super(_value, (v) => _then(v as _$ScreenTypePost));
 
   @override
-  _$ScreenTypeComment get _value => super._value as _$ScreenTypeComment;
+  _$ScreenTypePost get _value => super._value as _$ScreenTypePost;
 
   @override
   $Res call({
     Object? postId = freezed,
     Object? uid = freezed,
   }) {
-    return _then(_$ScreenTypeComment(
+    return _then(_$ScreenTypePost(
       postId == freezed
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
@@ -773,8 +773,8 @@ class __$$ScreenTypeCommentCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ScreenTypeComment implements ScreenTypeComment {
-  const _$ScreenTypeComment(this.postId, this.uid);
+class _$ScreenTypePost implements ScreenTypePost {
+  const _$ScreenTypePost(this.postId, this.uid);
 
   @override
   final String postId;
@@ -783,14 +783,14 @@ class _$ScreenTypeComment implements ScreenTypeComment {
 
   @override
   String toString() {
-    return 'ScreenType.comment(postId: $postId, uid: $uid)';
+    return 'ScreenType.post(postId: $postId, uid: $uid)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ScreenTypeComment &&
+            other is _$ScreenTypePost &&
             const DeepCollectionEquality().equals(other.postId, postId) &&
             const DeepCollectionEquality().equals(other.uid, uid));
   }
@@ -803,8 +803,8 @@ class _$ScreenTypeComment implements ScreenTypeComment {
 
   @JsonKey(ignore: true)
   @override
-  _$$ScreenTypeCommentCopyWith<_$ScreenTypeComment> get copyWith =>
-      __$$ScreenTypeCommentCopyWithImpl<_$ScreenTypeComment>(this, _$identity);
+  _$$ScreenTypePostCopyWith<_$ScreenTypePost> get copyWith =>
+      __$$ScreenTypePostCopyWithImpl<_$ScreenTypePost>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -813,9 +813,9 @@ class _$ScreenTypeComment implements ScreenTypeComment {
     required TResult Function() home,
     required TResult Function() addPost,
     required TResult Function() signUp,
-    required TResult Function(String postId, String uid) comment,
+    required TResult Function(String postId, String uid) post,
   }) {
-    return comment(postId, uid);
+    return post(postId, uid);
   }
 
   @override
@@ -825,9 +825,9 @@ class _$ScreenTypeComment implements ScreenTypeComment {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
   }) {
-    return comment?.call(postId, uid);
+    return post?.call(postId, uid);
   }
 
   @override
@@ -837,11 +837,11 @@ class _$ScreenTypeComment implements ScreenTypeComment {
     TResult Function()? home,
     TResult Function()? addPost,
     TResult Function()? signUp,
-    TResult Function(String postId, String uid)? comment,
+    TResult Function(String postId, String uid)? post,
     required TResult orElse(),
   }) {
-    if (comment != null) {
-      return comment(postId, uid);
+    if (post != null) {
+      return post(postId, uid);
     }
     return orElse();
   }
@@ -853,9 +853,9 @@ class _$ScreenTypeComment implements ScreenTypeComment {
     required TResult Function(ScreenTypeHome value) home,
     required TResult Function(ScreenTypeAddPost value) addPost,
     required TResult Function(ScreenTypeSignUp value) signUp,
-    required TResult Function(ScreenTypeComment value) comment,
+    required TResult Function(ScreenTypePost value) post,
   }) {
-    return comment(this);
+    return post(this);
   }
 
   @override
@@ -865,9 +865,9 @@ class _$ScreenTypeComment implements ScreenTypeComment {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
   }) {
-    return comment?.call(this);
+    return post?.call(this);
   }
 
   @override
@@ -877,23 +877,23 @@ class _$ScreenTypeComment implements ScreenTypeComment {
     TResult Function(ScreenTypeHome value)? home,
     TResult Function(ScreenTypeAddPost value)? addPost,
     TResult Function(ScreenTypeSignUp value)? signUp,
-    TResult Function(ScreenTypeComment value)? comment,
+    TResult Function(ScreenTypePost value)? post,
     required TResult orElse(),
   }) {
-    if (comment != null) {
-      return comment(this);
+    if (post != null) {
+      return post(this);
     }
     return orElse();
   }
 }
 
-abstract class ScreenTypeComment implements ScreenType {
-  const factory ScreenTypeComment(final String postId, final String uid) =
-      _$ScreenTypeComment;
+abstract class ScreenTypePost implements ScreenType {
+  const factory ScreenTypePost(final String postId, final String uid) =
+      _$ScreenTypePost;
 
   String get postId => throw _privateConstructorUsedError;
   String get uid => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  _$$ScreenTypeCommentCopyWith<_$ScreenTypeComment> get copyWith =>
+  _$$ScreenTypePostCopyWith<_$ScreenTypePost> get copyWith =>
       throw _privateConstructorUsedError;
 }

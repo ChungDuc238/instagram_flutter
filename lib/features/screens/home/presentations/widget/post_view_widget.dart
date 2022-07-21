@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../commons/common.dart';
 import '../../../../../core/constans/images.dart';
 import '../../../../../entities/models/post/post_model.dart';
+import '../../../post/presentations/bloc/blocs.dart';
 import '../bloc/home_bloc.dart';
 import 'list_post_action_widget.dart';
 
@@ -17,6 +18,7 @@ class PostViewWidgetState extends State<PostViewWidget> {
   @override
   Widget build(BuildContext context) {
     final state = context.watch<HomeBloc>().state;
+
     return state.maybeWhen(
       initial: LoadingWidget.new,
       loading: LoadingWidget.new,
@@ -30,12 +32,14 @@ class PostViewWidgetState extends State<PostViewWidget> {
                 children: [
                   ...List.generate(snapshot.data!.length, (index) {
                     final post = snapshot.data![index];
+
                     return PostWidget(
                       post: post,
                       url: post.profileImage,
                       userName: post.userName,
                       urlPhoto: post.urlPhoto,
                       caption: post.caption,
+                      key: UniqueKey(),
                     );
                   })
                 ],
@@ -102,7 +106,14 @@ class PostWidget extends StatelessWidget {
           fit: BoxFit.fitWidth,
         ),
         yHeight1,
-        ListPostAction(post: post),
+        Builder(
+          builder: (context) {
+            context.read<PostBloc>().add(checkUserLikePostEvent(post.postId));
+            return ListPostAction(
+              post: post,
+            );
+          },
+        ),
         Text(
           caption ?? '',
           style: textstyle,

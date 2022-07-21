@@ -1,8 +1,9 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
-class SendPushNotifcation{
-   Future<void> sendPushMessage(String token, String body, String title) async {
+
+class SendPushNotifcation {
+  Future<void> sendPushMessage(String token, String body, String title) async {
     try {
       await http.post(
         Uri.parse('https://fcm.googleapis.com/fcm/send'),
@@ -13,7 +14,10 @@ class SendPushNotifcation{
         },
         body: jsonEncode(
           <String, dynamic>{
-            'notification': <String, dynamic>{'body': body, 'title': title},
+            'notification': <String, dynamic>{
+              'body': '$body bạn có 1 bình luận mới',
+              'title': title
+            },
             'priority': 'high',
             'data': <String, dynamic>{
               'click_action': 'FLUTTER_NOTIFICATION_CLICK',

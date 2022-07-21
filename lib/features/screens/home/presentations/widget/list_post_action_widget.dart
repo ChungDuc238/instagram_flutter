@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../commons/common.dart';
 import '../../../../../core/constans/icons.dart';
 import '../../../../../entities/models/post/post_model.dart';
+import '../../../post/presentations/bloc/blocs.dart';
 import '../bloc/home_bloc.dart';
 import 'item_post_action.dart';
 
@@ -20,11 +21,19 @@ class ListPostAction extends StatelessWidget {
       padding: const EdgeInsets.all(8),
       child: Row(
         children: [
-          ItemPostAction(
-            callback: () {
-              
+          Builder(
+            builder: (context) {
+              final state = context.watch<PostBloc>().state;
+              return state.maybeWhen(
+                like: (isLike) => ItemPostAction(
+                  callback: () {
+                    context.read<PostBloc>().add(LikePostEvent(post.postId));
+                  },
+                  item: isLike ? IconList.iconIsLike : IconList.iconLike,
+                ),
+                orElse: Container.new,
+              );
             },
-            item: IconList.iconLike,
           ),
           Padding(
             padding: const EdgeInsets.only(

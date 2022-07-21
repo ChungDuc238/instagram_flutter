@@ -23,7 +23,7 @@ mixin _$PostModel {
   String get uid => throw _privateConstructorUsedError;
   String get postId => throw _privateConstructorUsedError;
   DateTime get date => throw _privateConstructorUsedError;
-  List<dynamic> get like => throw _privateConstructorUsedError;
+  List<String> get like => throw _privateConstructorUsedError;
   String? get caption => throw _privateConstructorUsedError;
   String? get userName => throw _privateConstructorUsedError;
   String? get urlPhoto => throw _privateConstructorUsedError;
@@ -43,7 +43,7 @@ abstract class $PostModelCopyWith<$Res> {
       {String uid,
       String postId,
       DateTime date,
-      List<dynamic> like,
+      List<String> like,
       String? caption,
       String? userName,
       String? urlPhoto,
@@ -85,7 +85,7 @@ class _$PostModelCopyWithImpl<$Res> implements $PostModelCopyWith<$Res> {
       like: like == freezed
           ? _value.like
           : like // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       caption: caption == freezed
           ? _value.caption
           : caption // ignore: cast_nullable_to_non_nullable
@@ -116,7 +116,7 @@ abstract class _$$_PostModelCopyWith<$Res> implements $PostModelCopyWith<$Res> {
       {String uid,
       String postId,
       DateTime date,
-      List<dynamic> like,
+      List<String> like,
       String? caption,
       String? userName,
       String? urlPhoto,
@@ -160,7 +160,7 @@ class __$$_PostModelCopyWithImpl<$Res> extends _$PostModelCopyWithImpl<$Res>
       like: like == freezed
           ? _value._like
           : like // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+              as List<String>,
       caption: caption == freezed
           ? _value.caption
           : caption // ignore: cast_nullable_to_non_nullable
@@ -188,7 +188,7 @@ class _$_PostModel implements _PostModel {
       {required this.uid,
       required this.postId,
       required this.date,
-      required final List<dynamic> like,
+      required final List<String> like,
       this.caption,
       this.userName = 'user_name',
       this.urlPhoto,
@@ -204,9 +204,9 @@ class _$_PostModel implements _PostModel {
   final String postId;
   @override
   final DateTime date;
-  final List<dynamic> _like;
+  final List<String> _like;
   @override
-  List<dynamic> get like {
+  List<String> get like {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_like);
   }
@@ -271,7 +271,7 @@ abstract class _PostModel implements PostModel {
       {required final String uid,
       required final String postId,
       required final DateTime date,
-      required final List<dynamic> like,
+      required final List<String> like,
       final String? caption,
       final String? userName,
       final String? urlPhoto,
@@ -287,7 +287,7 @@ abstract class _PostModel implements PostModel {
   @override
   DateTime get date => throw _privateConstructorUsedError;
   @override
-  List<dynamic> get like => throw _privateConstructorUsedError;
+  List<String> get like => throw _privateConstructorUsedError;
   @override
   String? get caption => throw _privateConstructorUsedError;
   @override

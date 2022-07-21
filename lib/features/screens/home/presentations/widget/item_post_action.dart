@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ItemPostAction extends StatelessWidget {
   final Function() callback;
   final String item;
+  
   const ItemPostAction({required this.callback, required this.item, super.key});
 
   @override
@@ -11,7 +12,6 @@ class ItemPostAction extends StatelessWidget {
       onTap: callback,
       child: Image.asset(
         item,
-        color: Colors.black,
         width: 25,
         height: 25,
       ),
